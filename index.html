@@ -1,95 +1,159 @@
 <!doctype html>
 <html>
-	<head>
-		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-		<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
-	</head>
-	<body>
-		<div id="body_div">
-			<div class="one_of_four" height = "300px">
-				<p>
-					<a href="index.html">
-						<img src="http://i.imgur.com/ouZ630W.png" title="source: imgur.com"/>
-					</a>
-				</p>
-			</div>
-			
-			
-			<div class="two_of_four clearfix ">
 
-						<div class = "div_float_1">
-										<a href="#">
-											<img src="img/clearFam.png" alt="This is a test" />
-										</a>
-						</div>
-						<div class = "div_float_2">
-										<a href="indexfamily.html">
-											<img class="shadow" src="img/soloClear.png" alt="Solo cup">
-										</a>
-						</div>
-			</div>
-			
+<head>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="stylesheet.css" />
+    <script>
+    	var obj = {
+					"evtsid":"1",
+					"evt_name":"Dawes",
+					"evt_location":"Capital City Amphitheater",
+					"evt_phone":"850-671-4700",
+					"evt_minPrice":"14",
+					"evt_maxPrice":"30",
+					"evt_website":"http:\/\/www.capitalcityamphitheater.com\/event\/2016\/04\/08\/dawes\/",
+					"evt_descrip":"Dawes, an American folk-rock band from Los Angeles, California, is composed of brothers Taylor (guitars and vocals) and Griffin Goldsmith (drums), along with Wylie Gelber (bass) and Duane Betts (guitar)."
+				};
+					
+		var objj = {
+					"evtsid":"2",
+					"evt_name":"Stetsons at the Moon",
+					"evt_location":"1105 E Lafayette St, Tallahassee, FL 32301",
+					"evt_phone":"(850) 878-6900",
+					"evt_minPrice":"$5",
+					"evt_maxPrice":"$15",
+					"evt_website":"tallahassee.moonevents.com/",
+					"evt_descrip":"It has two levels and a bar like setting on the immediate right in its own small room when you walk in. They have a stage(for performers only) and two platforms that girls mostly dance on. There are 4 bars that are open depending on the night and the amount of people there. There is now a VIP (w/ bottle service) section that comes and goes at the convenience of management. If there is not a designed VIP booth they will let the upper level be the VIP area which you share with everyone else in VIP with no bottle service.  There is also a VIP line but the line for general admission always moves fast even if there are over 60 people in it. Sometimes the tickets can be over priced since they usually allow people in for $5 on a regular night. Depending on the night there can be drink specials or none at all. Sometimes there are fights and the music sucks and other times there are no fights and the music is great,it depends on the night,crowd, and DJ."
+				};
+					
 
-			<div class="three_of_four">
-				<div class="dropdown">
-						<div>
-							<p>Where are you?
-							</p>
-						</div>
-						<div>
-									<div class="form-group">
-									<textarea class="form-control" rows="1" id="comment" style= "width:200px">Tallahassee</textarea>
-									</div>							
-						</div>
-				</div>
-				<div class="dropdown">
-						<div>
-							<p>How's the weather?
-							</p>
-						</div>
-						<div>									  
-										<div>
-										<form role="form">
-										<div class="form-group">
-										<select class="form-control" id="sel1" style= "width:200px";>
+        $(document).ready(function() {
+        	var myObj = obj;
+
+        	$('#choice1').click(function() {
+        		myObj = obj;
+        	});
+
+        	$('#choice2').click(function() {
+        		myObj = objj
+        	});
+
+            $('#bigGreenButton').click(function() {
+                $('#form1').hide();
+                $('#form2').hide();
+                $('#bigGreenButton').hide();
+                $('#results').show();
+                $('#name').text("Name: " + myObj.evt_name);
+                $('#location').text("Location: " + myObj.evt_location);
+                $('#phone').text("Phone Number: " + myObj.evt_phone);
+                $('#minPrice').text("Minimum Price: " + myObj.evt_minprice);
+                $('#maxPrice').text("Maximum Price: " + myObj.evt_maxprice);
+                $('#website').text("Website: " + myObj.evt_website);
+                $('#descrip').text("Description: " + myObj.evt_descrip);
+                
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <div id="body_div">
+        <div class="one_of_four" height="300px">
+            <p>
+                <a href="index.html">
+                    <img src="http://i.imgur.com/ouZ630W.png" title="source: imgur.com" />
+                </a>
+            </p>
+        </div>
+
+
+        <div id="form1" class="two_of_four clearfix ">
+
+            <div id="choice1" class="div_float_1">
+                <a href="#">
+                    <img src="img/clearFam.png" alt="This is a test" />
+                </a>
+            </div>
+            <div id="choice2" class="div_float_2">
+                <a href="#">
+                    <img class="shadow" src="img/soloClear.png" alt="Solo cup">
+                </a>
+            </div>
+        </div>
+
+
+        <div id="form2" class="three_of_four">
+            <div class="dropdown">
+                <div>
+                    <p>Where are you?
+                    </p>
+                </div>
+                <div>
+                    <div class="form-group">
+                        <textarea class="form-control" rows="1" id="comment" style="width:200px">Tallahassee</textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <div>
+                    <p>How's the weather?
+                    </p>
+                </div>
+                <div>
+                    <form role="form">
+                        <div class="form-group">
+                            <select class="form-control" id="sel1" style="width:200px" ;>
 										<option>Sunny</option>
 										<option>Rainy</option>
 										<option>Windy</option>
 										</select>
-						</div>
-				</div>
-				<div class="dropdown">
-						<div>
-							<p>What's the price range?
-						</div>
-						<div>
-								<div class="form-group">
-									<p style="color:#95a5a6;font-family:Courier;font-size: 30px";>Price Range:</p>
-									<textarea class="form-control" rows="1" id="comment" style= "width:100px"></textarea>
-								<p style="color:#95a5a6;font-family:Courier;font-size: 30px">to </p>
-								<div class="form-group">
-									<textarea class="form-control" rows="1" id="comment" style= "width:100px"></textarea>
-								</div>
-						</div>
-				</div>
-			</div>
-			</div>
-			<div class="four_of_four" height="150px">
-					<img src="img/ARROW.png" width="175px" height="100px">
-			</div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="dropdown">
+                <div>
+                    <p>What's the price range?</p>
+                </div>
+                <div>
+                    <div class="form-group">
+                        <p style="color:#95a5a6;font-family:Courier;font-size: 30px" ;>Price Range:</p>
+                        <textarea class="form-control" rows="1" id="comment" style="width:100px"></textarea>
+                    </div>
+                    <p style="color:#95a5a6;font-family:Courier;font-size: 30px">to </p>
+                    <div class="form-group">
+                        <textarea class="form-control" rows="1" id="comment" style="width:100px"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="bigGreenButton" class="four_of_four" height="150px">
+            <img src="img/ARROW.png" width="175px" height="100px">
+        </div>
 
-			<div class="five_of_four">
-				<style="font-size: 19px; font-family: fancy_text;">
-				<p>Name:</p>
-				<p>Location:</P>
-				<p>Description:</p>
-				<p>Website:</p>
-				<p>Phone:</P>
-				<p>Price:</p>
-			</div>
+        <div id="results" class="five_of_four" hidden>
+            <style="font-size: 19px; font-family: fancy_text;" />
+            <p id="name"></p>
+            <p id="location"></P>
+            <p id="descrip"></p>
+            <p id="website"></p>
+            <p id="phone"></P>
+            <p id="price"></p>
+            
+        </div>
 
-		</div>
-	</body>	
+    </div>
+<script>
+			
+
+
+
+
+</script>
+</body>
+
 </html>
