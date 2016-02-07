@@ -105,8 +105,18 @@ div.div_float_2 {float:left;
 
 #body_div{width:600px; margin:auto;}
 
-.one_of_four{text-align: center;}
-.two_of_four{height:400 px;}
+.one_of_four{
+	text-align: center;
+	color:#95a5a6;
+	font-family: Courier;
+	font-size: 50px;
+}
+.two_of_four p{
+	height:400 px;
+	color:#95a5a6;
+	font-family: Courier;
+	font-size: 50px;
+}
 
 .two_of_four img{
 	width: 200px;
@@ -117,6 +127,17 @@ div.div_float_2 {float:left;
 	display: block;
 }
 
+.three_of_four p{
+	color:#95a5a6;
+	font-family: Courier;
+	font-size: 40px;
+}
+
+.five_of_four p{
+	color:#95a5a6;
+	font-family: Courier;
+	font-size: 50px;
+}
 
 @media (max-width: 600px){
 	.div_float_2,
