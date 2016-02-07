@@ -1,12 +1,87 @@
 <!doctype html>
 <html>
 	<head>
-		<a style="color:Red"><!--Insert Doing Logo --></a>
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
 	</head>
-	<body style="background-color:gold">>
-		<a href="indexfamily.html">Family Time</a>
-		<a href="indexsocial.html">Friend Time</a>
-		<!-- buttuns family -->
-		<!--button social -->
+	<body>
+		<div id="body_div">
+			<div class="one_of_four" height = "300px">
+				<p>
+					<a href="index.html">
+						<img src="http://i.imgur.com/ouZ630W.png" title="source: imgur.com"/>
+					</a>
+				</p>
+			</div>
+			
+			<div class="two_of_four" height = "300px">
+				<p>
+					<div class = "div_float_1">
+						<a href="indexfamily.html">
+							<img class="shadow" src="clearFam.png" width="200" height= "200" alt="Happy asians">
+						</a>
+					</div>
+				</p>
+				<p>
+					<div class = "div_float_2">
+						<a href="indexsocial.html">
+							<img class="shadow" src="soloClear.png" width="200" height="200" alt="Solo cup">
+						</a>
+					</div>
+				</p>
+			</div>
+
+			<div class="three_of_four" height="600px">
+				<div class="dropdown">
+						<div>
+							<p class="fancy_text">Where are you?
+							</p>
+						</div>
+						<div>
+									<div class="form-group">
+									<textarea class="form-control" rows="1" id="comment" style= "width:200px">Tallahassee</textarea>
+									</div>							
+						</div>
+				</div>
+				<div class="dropdown">
+						<div>
+							<p class="fancy_text">How's the weather?
+							</p>
+						</div>
+						<div>									
+										<div class="container">
+										<form role="form">
+										<div class="form-group">
+										<label for="sel1">Weather Conditions:</label>
+										<select class="form-control" id="sel1" style= "width:200px";>
+										<option>Sunny</option>
+										<option>Rainy</option>
+										<option>Windy</option>
+										</select>
+						</div>
+				</div>
+				<div class="dropdown">
+						<div>
+							<p class="fancy_text">What's the price range?
+						</div>
+						<div>
+								<div class="form-group">
+									<label for="comment">Price Range:</label>
+									<textarea class="form-control" rows="1" id="comment" style= "width:100px"></textarea>
+								to
+								<div class="form-group">
+									<textarea class="form-control" rows="1" id="comment" style= "width:100px"></textarea>
+								</div>
+						</div>
+				</div>
+			</div>
+			
+			<div class="four_of_four" height="150px">
+					<img src="">
+			</div>
+
+		</div>
 	</body>	
 </html>
